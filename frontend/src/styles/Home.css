@@ -1,0 +1,233 @@
+/* Home.css */
+
+/* General body styling */
+body {
+    background-color: white; /* Dark background for better contrast */
+    color: black; /* White text for readability */
+    font-family: Arial, sans-serif; /* Font style */
+    margin: 0;
+    padding: 0;
+}
+
+/* Carousel styles */
+.carousel {
+    width: 100%;
+    height: 300px; /* Height of carousel */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Positioning for carousel items */
+     /* Spacing around carousel */
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Overlapping items */
+    transition: opacity 1s ease; /* Smooth transition */
+}
+
+.carousel-item img {
+    width: 100%; /* Full width for images */
+    height: 100%; /* Full height for images */
+    object-fit: cover; /* Cover the container */
+}
+
+/* Card styles */
+.main {
+    position: relative;
+    margin: 20px auto; /* Center the card section */
+    display: flex; /* Flex layout for cards */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center align items */
+}
+
+.card {
+    width: 15em;
+    height: 10em;
+    background-color: #252525;
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative; /* For absolutely positioned elements */
+    margin-bottom: 20px; /* Spacing between cards */
+}
+
+.fl {
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.fl:hover .fullscreen {
+    scale: 1.2;
+}
+
+.fl:hover .fullscreen_svg {
+    fill: white;
+}
+
+.fullscreen {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 5px;
+    background-color: #727890;
+    margin: 1em;
+    margin-right: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease-in-out;
+    box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+}
+
+.card_back {
+    position: absolute;
+    width: 15em;
+    height: 13em;
+    background-color: rgba(30, 31, 38, 0.575);
+    border-radius: 7px;
+    margin-top: -5em;
+    margin-left: 0.7em;
+    transition: .2s ease-in-out;
+    z-index: -1;
+}
+
+.main:hover .card_back {
+    margin-top: -6.25em;
+    margin-left: 0em;
+    scale: 1.1;
+    height: 15.25em;
+    cursor: pointer;
+}
+
+.main:hover .fl {
+    opacity: 1;
+    cursor: pointer;
+    margin-right: 0.5em;
+}
+
+.data {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+}
+
+.img {
+    width: 2.25em;
+    height: 2.25em;
+    background-color: #252525;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 0.5em;
+    font-family: Montserrat;
+    color: white;
+}
+
+.text_m {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.text_s {
+    font-size: 0.7em;
+}
+
+/* Button styles */
+.btns {
+    display: flex;
+    gap: 0.5em;
+    transition: .2s ease-in-out;
+}
+
+/* Likes, comments, and views button styles */
+.likes, .comments, .views {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 1.4em;
+    border-radius: 4px;
+    margin-top: -0.5em;
+    opacity: 0;
+    background-color: #444857;
+    transition: .2s ease-in-out;
+}
+
+.likes_text, .comments_text, .views_text {
+    font-family: Montserrat;
+    font-size: 0.8em;
+    margin-left: 0.25em;
+    color: white;
+}
+
+.likes_svg, .comments_svg, .views_svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+}
+
+.likes:hover, .comments:hover, .views:hover {
+    background-color: #5A5F73;
+    cursor: pointer;
+}
+
+.main:hover .likes, .main:hover .comments, .main:hover .views {
+    margin-top: 0.5em;
+    opacity: 1;
+}
+/* New Arrivals Section */
+.new-arrivals-section {
+    width: 100%; /* Full width of the container */
+    padding: 40px 20px; /* Padding around the section */
+    background-color: #f9f9f9; /* Light background to differentiate the section */
+    text-align: center; /* Center-align any headings or text */
+}
+
+/* Section Heading */
+.new-arrivals-section h2 {
+    font-size: 2rem; /* Font size for heading */
+    font-weight: bold; /* Bold heading */
+    color: #333; /* Dark color for contrast */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+/* Main Container for Cards */
+.main {
+    display: flex; /* Use flex to align items */
+    
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Individual Card Styling */
+.card {
+    width: 150px; /* Fixed width for square cards */
+    height: 150px; /* Fixed height for square cards */
+    background-color: #252525; /* Dark background for the card */
+    margin: 10px; /* Space between items */
+    border-radius: 7px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for images */
+    display: flex; /* Flex to center the image */
+    
+}
+
+/* Ensure Images are contained within the Items */
+.card img {
+    width: 100%; /* Full width of the card */
+    height: 100%; /* Full height of the card */
+    object-fit: cover; /* Cover the container without distortion */
+    border-radius: 7px; /* Match card's border radius */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .card {
+        width: 100px; /* Adjusted width for smaller screens */
+        height: 100px; /* Adjusted height for smaller screens */
+    }
+}
+
